@@ -1,0 +1,30 @@
+# Never commit what the tool reads or produces: videos, audio, frames, transcripts
+library/
+inbox/
+_engine/
+LIBRARY.md
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.m4a
+*.mp3
+*.wav
+*.vtt
+*.srt
+
+# Secrets: never, no exceptions
+.env
+.env.*
+*.pem
+*.key
+cookies*.txt
+*cookies*
+
+# Python / OS noise
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+._*
