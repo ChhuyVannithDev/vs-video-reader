@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """VS Video Reader cleanup: free space in ~/VS-Video-Read by date. Nothing is ever deleted automatically.
 
+Author: Chhuy Vannith (VSDev) · https://vincentchhuy.com · https://github.com/ChhuyVannithDev/vs-video-reader · MIT
+
     python3 cleanup.py --older-than 7            # folders read more than 7 days ago
     python3 cleanup.py --before 2026-11-01       # folders read before that date
     python3 cleanup.py --month 2026-10           # folders read in that month

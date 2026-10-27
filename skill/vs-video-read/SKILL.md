@@ -9,6 +9,7 @@ A trading video's logic lives **on the chart**. A transcript that says "this can
 without the picture, so this skill gives Claude both: the words, and the chart frames on screen while they were said.
 
 This skill **studies** a video. It doesn't place trades or change any trading system.
+Part of [VS Video Reader](https://github.com/ChhuyVannithDev/vs-video-reader) by Chhuy Vannith (VSDev), MIT licensed.
 
 ## The folder: `~/VS-Video-Read/` (override with `VS_VIDEO_HOME`)
 

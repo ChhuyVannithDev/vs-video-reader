@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """VS Video Reader: turn a trading video into words + chart frames an AI can read.
 
+Author: Chhuy Vannith (VSDev) · https://vincentchhuy.com · https://github.com/ChhuyVannithDev/vs-video-reader · MIT
+
     python3 video_read.py SOURCE [OUT_DIR] [options]
 
 SOURCE is a video link (YouTube, Facebook, X ... anything yt-dlp opens) or a

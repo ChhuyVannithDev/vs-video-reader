@@ -15,8 +15,9 @@ Speech-to-text runs **locally on your Mac's GPU**. No audio or video is uploaded
 Trading videos explain their logic *on the chart*: "this candle here", "we enter here", "stop goes just above". A
 transcript alone loses all of that, and presenters often **say one number while the chart shows another**.
 
-In one test, the presenter said *"750 ticks stop, 2:1"*. The position tool on screen read **stop $4.67, R:R 3.21**.
-Only a reader that sees the frames catches that.
+In one test, the presenter said *"750 ticks stop, 2 to 1"* while the position tool on screen read **stop 4.67, risk/reward
+3.21**. Forty seconds later the replay showed stop 7.50, target 15.00, and the target was never hit. Only a reader
+that sees the frames catches that. The full write-up is in [`examples/sample-verdict.md`](examples/sample-verdict.md).
 
 ## What it does
 
@@ -27,6 +28,16 @@ Only a reader that sees the frames catches that.
 - 🧠 **Structured verdict**: the strategy literally, chart-vs-speech gaps, strong points, video tricks, and a verdict per trading style (swing · intraday · scalping)
 - 📚 **A library with memory**: `LIBRARY.md` logs every video. The same link, or the same file even renamed, is recognised and never processed twice
 - 🧹 **Cleanup on your terms**: free space by date with a dry run first. Nothing is ever deleted automatically
+
+## Example output
+
+A real run on a public 5:49 YouTube video, on an M-series Mac: 62 transcript lines and 33 chart frames in about
+30 seconds, of which local Whisper took 7.
+
+| File | What it is |
+|---|---|
+| [`examples/sample-index.md`](examples/sample-index.md) | what Claude reads: each chart frame with the exact words spoken while it was on screen |
+| [`examples/sample-verdict.md`](examples/sample-verdict.md) | what Claude writes back: the strategy rule by rule, chart-vs-speech gaps, strong points, what the video doesn't show, a verdict per trading style |
 
 ## How it works
 
@@ -147,6 +158,18 @@ audio and video. `--all-files` removes whole folders. `LIBRARY.md` always keeps 
 [mlx-whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) ·
 [Whisper large-v3-turbo](https://huggingface.co/mlx-community/whisper-large-v3-turbo) ·
 [Claude Code](https://claude.com/claude-code)
+
+## About the author
+
+Built by **Chhuy Vannith** (VSDev), a PHP and MQL5 developer in Cambodia who builds trading systems for gold. This tool
+grew out of a daily habit: studying other traders' videos to pull out the one rule worth testing, without trusting the
+words over the chart. It is published so anyone can do the same on their own Mac.
+
+- Site: [vincentchhuy.com](https://vincentchhuy.com)
+- GitHub: [@ChhuyVannithDev](https://github.com/ChhuyVannithDev)
+- Issues and ideas: open one on this repo
+
+Changes are listed in [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 
